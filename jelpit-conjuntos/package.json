@@ -7,13 +7,26 @@
     "/projects/lib/*"
   ],
   "scripts": {
-    "build:shell": "npm run build:prod --workspace=@jc/shell",
-    "start:shell": "npm run start --workspace=@jc/shell",
-    "build:cuotas": "ng build --project=@apps/cuotas",
-    "start:cuotas": "ng serve --project=@apps/cuotas --port 4001",
-    "build:herramientas": "ng build --project=@apps/herramientas",
-    "start:herramientas": "ng serve --project=@apps/herramientas --port 4002"
+    "shell:build": "npm run build:prod --workspace=shell",
+    "shell:start": "npm run start --workspace=shell",
 
+    "cuotas:start:dev"  : "ng serve --configuration dev   --project=@apps/cuotas --port 4001",
+    "cuotas:start:stage": "ng serve --configuration stage --project=@apps/cuotas --port 4001",
+    "cuotas:start:pre"  : "ng serve --configuration pre   --project=@apps/cuotas --port 4001",
+    "cuotas:start:prod" : "ng serve --configuration prod  --project=@apps/cuotas --port 4001",
+    "cuotas:build:dev"  : "ng build --configuration dev   --project=@apps/cuotas",
+    "cuotas:build:stage": "ng build --configuration stage --project=@apps/cuotas",
+    "cuotas:build:pre"  : "ng build --configuration pre   --project=@apps/cuotas",
+    "cuotas:build:prod" : "ng build --configuration prod  --project=@apps/cuotas",
+
+    "herramientas:start:dev"  : "ng serve --configuration dev   --project=@apps/herramientas --port 4002",
+    "herramientas:start:stage": "ng serve --configuration stage --project=@apps/herramientas --port 4002",
+    "herramientas:start:pre"  : "ng serve --configuration pre   --project=@apps/herramientas --port 4002",
+    "herramientas:start:prod" : "ng serve --configuration prod  --project=@apps/herramientas --port 4002",
+    "herramientas:build:dev"  : "ng build --configuration dev   --project=@apps/herramientas",
+    "herramientas:build:stage": "ng build --configuration stage --project=@apps/herramientas",
+    "herramientas:build:pre"  : "ng build --configuration pre   --project=@apps/herramientas",
+    "herramientas:build:prod" : "ng build --configuration prod  --project=@apps/herramientas"
   },
   "private": true,
   "dependencies": {

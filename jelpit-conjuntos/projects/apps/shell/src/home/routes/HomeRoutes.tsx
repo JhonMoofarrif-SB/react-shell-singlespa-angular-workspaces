@@ -8,10 +8,8 @@ export const HomeRoutes = () => {
         <Sidebar />
         <div className="" style={{ width: "80%", background: "#e8d7f1" }}>
           <div>
-            <div id="single-spa-application:@jc/app1"></div>
-            <div id="single-spa-application:@jc/app2"></div>
-            <div id="single-spa-application:@jc/app3"></div>
-            <div id="single-spa-application:@jc/app4"></div>
+            <div id="single-spa-application:herramientas"></div>
+            <div id="single-spa-application:cuotas"></div>
           </div>
         </div>
       </div>
