@@ -1,0 +1,251 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "@apps/herramientas": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/apps/herramientas",
+      "sourceRoot": "projects/apps/herramientas/src",
+      "prefix": "herramientas",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/herramientas",
+            "index": "projects/apps/herramientas/src/index.html",
+            "main": "projects/apps/herramientas/src/main.ts",
+            "polyfills": "projects/apps/herramientas/src/polyfills.ts",
+            "tsConfig": "projects/apps/herramientas/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/apps/herramientas/src/favicon.ico",
+              "projects/apps/herramientas/src/assets"
+            ],
+            "styles": [
+              "projects/apps/herramientas/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/apps/herramientas/src/environments/environment.ts",
+                  "with": "projects/apps/herramientas/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "@apps/herramientas:build:production"
+            },
+            "development": {
+              "browserTarget": "@apps/herramientas:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "@apps/herramientas:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apps/herramientas/src/test.ts",
+            "polyfills": "projects/apps/herramientas/src/polyfills.ts",
+            "tsConfig": "projects/apps/herramientas/tsconfig.spec.json",
+            "karmaConfig": "projects/apps/herramientas/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/apps/herramientas/src/favicon.ico",
+              "projects/apps/herramientas/src/assets"
+            ],
+            "styles": [
+              "projects/apps/herramientas/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "@apps/cuotas": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/apps/cuotas",
+      "sourceRoot": "projects/apps/cuotas/src",
+      "prefix": "cuotas",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/cuotas",
+            "index": "projects/apps/cuotas/src/index.html",
+            "main": "projects/apps/cuotas/src/main.ts",
+            "polyfills": "projects/apps/cuotas/src/polyfills.ts",
+            "tsConfig": "projects/apps/cuotas/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/apps/cuotas/src/favicon.ico",
+              "projects/apps/cuotas/src/assets"
+            ],
+            "styles": [
+              "projects/apps/cuotas/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/apps/cuotas/src/environments/environment.ts",
+                  "with": "projects/apps/cuotas/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "@apps/cuotas:build:production"
+            },
+            "development": {
+              "browserTarget": "@apps/cuotas:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "@apps/cuotas:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apps/cuotas/src/test.ts",
+            "polyfills": "projects/apps/cuotas/src/polyfills.ts",
+            "tsConfig": "projects/apps/cuotas/tsconfig.spec.json",
+            "karmaConfig": "projects/apps/cuotas/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/apps/cuotas/src/favicon.ico",
+              "projects/apps/cuotas/src/assets"
+            ],
+            "styles": [
+              "projects/apps/cuotas/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}
