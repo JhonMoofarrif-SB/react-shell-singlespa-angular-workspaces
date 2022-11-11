@@ -7,8 +7,12 @@
     "/projects/lib/*"
   ],
   "scripts": {
-    "shell:build": "npm run build:prod --workspace=shell",
-    "shell:start": "npm run start --workspace=shell",
+
+    "shell:start:dev"       : "npm run start       --workspace=shell",
+    "shell:build:prod"  : "npm run build:prod  --workspace=shell",
+    "shell:build:dev"   : "npm run build:dev   --workspace=shell",
+    "shell:build:stage" : "npm run build:stage --workspace=shell",
+    "shell:build:pre"   : "npm run build:pre   --workspace=shell",
 
     "cuotas:start:dev"  : "ng serve --configuration dev   --project=@apps/cuotas --port 4001",
     "cuotas:start:stage": "ng serve --configuration stage --project=@apps/cuotas --port 4001",

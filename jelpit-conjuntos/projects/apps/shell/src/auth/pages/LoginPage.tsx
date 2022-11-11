@@ -19,7 +19,7 @@ export const LoginPage = () => {
     <div className="container mt-5">
       <h1>Login</h1>
       <hr />
-
+      <h1>Hola mundo: {import.meta.env.VITE_HOLA}</h1>
       <button className="btn btn-primary" onClick={onLogin}>
         Login
       </button>
