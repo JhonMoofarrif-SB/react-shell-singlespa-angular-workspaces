@@ -240,11 +240,11 @@
       "prefix": "cuotas",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/apps/cuotas",
             "index": "projects/apps/cuotas/src/index.html",
-            "main": "projects/apps/cuotas/src/main.ts",
+            "main": "projects/apps/cuotas/src/main.single-spa.ts",
             "polyfills": "projects/apps/cuotas/src/polyfills.ts",
             "tsConfig": "projects/apps/cuotas/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -255,7 +255,13 @@
             "styles": [
               "projects/apps/cuotas/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "projects/apps/cuotas/extra-webpack.config.js",
+              "libraryName": "@apps/cuotas",
+              "libraryTarget": "umd"
+            },
+            "deployUrl": "http://localhost:4001/"
           },
           "configurations": {
             "prod": {
@@ -270,7 +276,7 @@
                 "output": "index.html"
               },
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
               "aot": true,
@@ -298,7 +304,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
               "aot": true,
@@ -326,7 +332,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
               "aot": true,
@@ -354,7 +360,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
               "aot": true,
@@ -366,7 +372,7 @@
           "defaultConfiguration": "prod"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "prod": {
               "browserTarget": "@apps/cuotas:build:prod"

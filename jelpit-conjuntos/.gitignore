@@ -41,5 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-
-projects/apps/shell/node_modules/*
+projects/apps/shell/node_modules
+projects/apps/shell/node_modules/.vite
+/projects/apps/shell/node_modules/*
