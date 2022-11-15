@@ -62,12 +62,10 @@
     "@angular/compiler-cli": "^14.2.10",
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^2.2.0",
-    "style-loader": "^3.3.1",
-    "css-loader": "^6.7.1",
     "ts-config-single-spa": "^3.0.0",
+    "tslib": "^2.4.1",
     "typescript": "^4.3.5",
     "vite": "^3.2.3",
-    "tslib": "^2.4.1",
     "vite-plugin-svgr": "^2.2.2",
     "vite-tsconfig-paths": "^3.5.2"
   }

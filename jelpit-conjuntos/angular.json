@@ -247,13 +247,9 @@
             "main": "projects/apps/cuotas/src/main.single-spa.ts",
             "polyfills": "projects/apps/cuotas/src/polyfills.ts",
             "tsConfig": "projects/apps/cuotas/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "projects/apps/cuotas/src/favicon.ico",
               "projects/apps/cuotas/src/assets"
-            ],
-            "styles": [
-              "projects/apps/cuotas/src/styles.scss"
             ],
             "scripts": [],
             "customWebpackConfig": {
