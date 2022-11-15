@@ -30,24 +30,15 @@ ReactDOM.render(
 // );
 
 registerApplication({
-  name: "@jc/app1",
-  app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app1"),
-  activeWhen: ["/app1"],
+  name: "@apps/cuotas",
+  app: (): Promise<LifeCycles> => (window as any).System.import("@apps/cuotas"),
+  activeWhen: ["/cuotas"],
 });
-registerApplication({
-  name: "@jc/app2",
-  app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app2"),
-  activeWhen: ["/app2"],
-});
-registerApplication({
-  name: "@jc/app3",
-  app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app3"),
-  activeWhen: ["/app3"],
-});
-registerApplication({
-  name: "@jc/app4",
-  app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app4"),
-  activeWhen: ["/app4"],
-});
+// registerApplication({
+//   name: "@jc/app2",
+//   app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app2"),
+//   activeWhen: ["/app2"],
+// });
+
 
 start({ urlRerouteOnly: true });
