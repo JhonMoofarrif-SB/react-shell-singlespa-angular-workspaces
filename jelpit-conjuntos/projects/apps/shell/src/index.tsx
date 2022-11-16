@@ -8,6 +8,18 @@ import { BrowserRouter } from "react-router-dom";
 
 import ReactDOM from "react-dom";
 
+//---
+import { Observable } from 'windowed-observable';
+
+const observable = new Observable('konoha');
+observable.subscribe((ninja) => {
+  console.log("Observer Shell", ninja)
+})
+observable.publish('Uchiha Shisui');
+
+//---
+
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
