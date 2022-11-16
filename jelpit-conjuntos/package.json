@@ -29,7 +29,8 @@
     "herramientas:build:pre": "ng build --configuration pre   --project=@apps/herramientas",
     "herramientas:build:prod": "ng build --configuration prod  --project=@apps/herramientas",
     "build:single-spa:@apps/cuotas": "ng build @apps/cuotas --configuration production",
-    "serve:single-spa:@apps/cuotas": "ng s --project @apps/cuotas --disable-host-check --port 4001 --live-reload false"
+    "serve:single-spa:@apps/cuotas": "ng s --project @apps/cuotas --disable-host-check --port 4001 --live-reload false",
+    "test": "jest --no-cache --coverage "
   },
   "private": true,
   "dependencies": {
@@ -67,6 +68,15 @@
     "typescript": "^4.3.5",
     "vite": "^3.2.3",
     "vite-plugin-svgr": "^2.2.2",
-    "vite-tsconfig-paths": "^3.5.2"
+    "vite-tsconfig-paths": "^3.5.2",
+    "@jest/transform": "^28.0.0",
+    "@jest/types": "^28.0.0",
+    "@types/jest": "^28.0.0",
+    "jest": "^28.0.0",
+    "jest-environment-jsdom": "^28.0.0",
+    "jest-preset-angular": "^12.2.2",
+    "jest-snapshot-serializer-raw": "^1.2.0",
+    "jest-util": "^28.0.0",
+    "ts-jest": "^28.0.0"
   }
 }

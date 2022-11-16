@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 /node_modules/**
-/projects/apps/shell/node_modules/**
+/projects/apps/**/node_modules/**
