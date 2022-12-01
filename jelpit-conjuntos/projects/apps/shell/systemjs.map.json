@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@apps/cuotas": "//localhost:4001/main.js"
+  }
+}

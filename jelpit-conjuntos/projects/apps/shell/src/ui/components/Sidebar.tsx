@@ -12,10 +12,19 @@ export const Sidebar = (props: Props) => {
         className={({ isActive }) =>
           `nav-item nav-link  ${isActive ? "active" : ""}`
         }
+        to="/"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          `nav-item nav-link  ${isActive ? "active" : ""}`
+        }
         to="/cuotas"
       >
         Cuotas app
       </NavLink>
+  
 
       {/* <NavLink
         className={({ isActive }) =>

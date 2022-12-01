@@ -1,10 +1,8 @@
 import React from "react";
 // import ReactDOM from "react-dom/client";
 import ShellApp from "./ShellApp";
-import { LifeCycles, registerApplication, start } from "single-spa";
 import "./index.scss";
 import { BrowserRouter } from "react-router-dom";
-// import "zone.js/dist/zone";
 
 import ReactDOM from "react-dom";
 
@@ -28,6 +26,9 @@ ReactDOM.render(
 //     </BrowserRouter>
 //   </React.StrictMode>
 // );
+
+import { LifeCycles, registerApplication, start } from "single-spa";
+import 'zone.js'
 
 registerApplication({
   name: "@apps/cuotas",
