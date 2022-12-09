@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "vite",
+    "start:dev": "vite --mode dev",
+    "start:stage": "vite --mode stage",
+    "start:pre": "vite --mode pre",
+    "start:prod": "vite --mode prod",
     "build:dev"  : "tsc && vite build --mode dev",
     "build:stage": "tsc && vite build --mode stage",
     "build:pre"  : "tsc && vite build --mode pre",
