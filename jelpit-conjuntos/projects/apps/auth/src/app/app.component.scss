@@ -1,0 +1,54 @@
+.primary-color{
+  color: #2E0063;
+  &__light{
+      color: #75298C !important;
+  }
+}
+
+.secondary-color{
+  color: #008542;
+}
+
+.bg-color{
+  &__primary{
+      background-color: #82E778;
+  }
+
+}
+
+.text-color-gray{
+  color: #666666;
+}
+
+.title{
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.subtitle{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.link{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.error{
+  color: #dc3545 !important;
+}
+
+.w-fit-content{
+  width: fit-content;
+}
+
+.text-align-start{
+  text-align: start;
+}
+
+

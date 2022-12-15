@@ -1,0 +1,14 @@
+{
+  "name": "@jc/app4",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start:ng": "ng serve",
+    "build:ng": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "build:prod": "ng build app4 --configuration production",
+    "start": "ng s --project app4 --disable-host-check --port 4002 --live-reload false"
+  },
+  "private": true
+}

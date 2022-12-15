@@ -11,7 +11,7 @@ export const Sidebar = (props: Props) => {
         className={({ isActive }) =>
           `nav-item nav-link  ${isActive ? "active" : ""}`
         }
-        to="/"
+        to="/home"
       >
         Home
       </NavLink>
@@ -23,7 +23,6 @@ export const Sidebar = (props: Props) => {
       >
         Cuotas app
       </NavLink>
-  
 
       {/* <NavLink
         className={({ isActive }) =>

@@ -1,0 +1,23 @@
+<div class="create-account__container">
+  <img
+    class="create-account__container__logo"
+    [src]="imgLogo"
+    width="120"
+    alt="create-accout-image"
+  />
+  <h2>{{ title }}</h2>
+  <h3>{{ subtitle }}</h3>
+  <ng-container *ngFor="let item of ProfileList; let i = index">
+    <app-profile-button
+      [path]="item.path"
+      [firstIcon]="item.firstIcon"
+      [label]="item.label"
+      [secondIcon]="item.secondIcon"
+    >
+    </app-profile-button>
+  </ng-container>
+  <div class="create-account__container__footer">
+    <span>{{ footerQuestion }}</span>
+    <a class="cursor-pointer" [routerLink]="['../']">{{ titleFooterUrl }}</a>
+  </div>
+</div>
