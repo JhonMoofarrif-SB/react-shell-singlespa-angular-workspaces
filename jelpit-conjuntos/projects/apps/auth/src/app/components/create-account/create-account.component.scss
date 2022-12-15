@@ -1,0 +1,42 @@
+.create-account{
+   &__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    &__logo{
+        width: 138.08px;
+        height: 61.91px;
+        margin: auto;
+    }
+    &__footer{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #666666;
+        span{
+            padding-right: 8px;
+        }
+        a{
+            font-weight: 700;
+            color: #008542;
+        }
+    }
+    h2{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 33px;
+        text-align: center;
+        color: #2E0063;
+    }
+    h3{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #666666;
+    }
+   }
+}

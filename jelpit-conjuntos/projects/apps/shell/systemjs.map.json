@@ -1,5 +1,7 @@
 {
   "imports": {
-    "@apps/cuotas": "//localhost:4001/main.js"
+    "@apps/cuotas": "//localhost:4001/main.js",
+    "@apps/auth": "//localhost:4002/main.js",
+    "@apps/app4": "//localhost:4003/main.js"
   }
 }

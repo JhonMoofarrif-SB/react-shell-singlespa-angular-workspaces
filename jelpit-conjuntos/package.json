@@ -16,24 +16,33 @@
     "shell:build:stage": "npm run build:stage --workspace=shell",
     "shell:build:pre": "npm run build:pre   --workspace=shell",
     "shell:build:prod": "npm run build:prod  --workspace=shell",
+
     "cuotas:start:dev": "ng serve --configuration dev   --project=@apps/cuotas --port 4001",
     "cuotas:start:stage": "ng serve --configuration stage --project=@apps/cuotas --port 4001",
     "cuotas:start:pre": "ng serve --configuration pre   --project=@apps/cuotas --port 4001",
     "cuotas:start:prod": "ng serve --configuration prod  --project=@apps/cuotas --port 4001",
+
     "cuotas:build:dev": "ng build --configuration dev   --project=@apps/cuotas",
     "cuotas:build:stage": "ng build --configuration stage --project=@apps/cuotas",
     "cuotas:build:pre": "ng build --configuration pre   --project=@apps/cuotas",
     "cuotas:build:prod": "ng build --configuration prod  --project=@apps/cuotas",
-    "herramientas:start:dev": "ng serve --configuration dev   --project=@apps/herramientas --port 4002",
-    "herramientas:start:stage": "ng serve --configuration stage --project=@apps/herramientas --port 4002",
-    "herramientas:start:pre": "ng serve --configuration pre   --project=@apps/herramientas --port 4002",
-    "herramientas:start:prod": "ng serve --configuration prod  --project=@apps/herramientas --port 4002",
-    "herramientas:build:dev": "ng build --configuration dev   --project=@apps/herramientas",
-    "herramientas:build:stage": "ng build --configuration stage --project=@apps/herramientas",
-    "herramientas:build:pre": "ng build --configuration pre   --project=@apps/herramientas",
-    "herramientas:build:prod": "ng build --configuration prod  --project=@apps/herramientas",
+
+    "auth:start:dev": "ng serve --configuration dev   --project=@apps/auth --port 4002",
+    "auth:start:stage": "ng serve --configuration stage --project=@apps/auth --port 4002",
+    "auth:start:pre": "ng serve --configuration pre   --project=@apps/auth --port 4002",
+    "auth:start:prod": "ng serve --configuration prod  --project=@apps/auth --port 4002",
+
+    "auth:build:dev": "ng build --configuration dev   --project=@apps/auth",
+    "auth:build:stage": "ng build --configuration stage --project=@apps/auth",
+    "auth:build:pre": "ng build --configuration pre   --project=@apps/auth",
+    "auth:build:prod": "ng build--configuration prod  --project=@apps/auth",
+
+    "app4:start:dev": "ng serve --configuration dev   --project=@apps/app4 --port 4003",
+
+
     "build:single-spa:@apps/cuotas": "ng build @apps/cuotas --configuration production",
     "serve:single-spa:@apps/cuotas": "ng s --project @apps/cuotas --disable-host-check --port 4001 --live-reload false",
+    "serve:single-spa:@apps/auth": "ng s --project @apps/auth --disable-host-check --port 4022 --live-reload false",
     "test": "jest --no-cache --coverage "
   },
   "private": true,
@@ -59,7 +68,17 @@
     "single-spa-angular": "^7.1.0",
     "single-spa-react": "^5.0.0",
     "windowed-observable": "^1.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "cross-domain-storage": "^2.0.7",
+    "crypto-js": "^4.1.1",
+    "firebase": "^9.12.1",
+    "graphql": "^16.6.0",
+    "primeflex": "^3.2.1",
+    "tslib": "^2.3.0",
+    "@angular-architects/module-federation": "^14.0.2",
+    "@angular-builders/custom-webpack": "^14.0.1",
+    "@apollo/client": "^3.6.9"
+
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "14.0.1",
@@ -82,6 +101,9 @@
     "typescript": "^4.3.5",
     "vite": "^3.2.3",
     "vite-plugin-svgr": "^2.2.2",
-    "vite-tsconfig-paths": "^3.5.2"
+    "vite-tsconfig-paths": "^3.5.2",
+    "@testing-library/angular": "^12.1.2",
+    "@types/crypto-js": "^4.1.1",
+    "ng-packagr": "^14.2.0"
   }
 }

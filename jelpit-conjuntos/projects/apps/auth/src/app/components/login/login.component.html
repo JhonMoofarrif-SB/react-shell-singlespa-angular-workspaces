@@ -1,0 +1,75 @@
+  <div class="row font-jelpit">
+    <div class="col-lg-5 col-md-7 text-center">
+      <div class="bg-white">
+        <div class="text-center">
+          <img src="projects/apps/auth/src/assets/logo_jelpit.svg" alt="Jelpit logo">
+          <h3 class="pt-3 font-weight-bold primary-color title mt-1">Iniciar Sesión</h3>
+
+          <div class="flex justify-content-center">
+            <div class="mr-6 cursor-pointer" *ngIf="socialMedia.facebook" id="loginFacebook">
+              <img src="assets/fb.png" alt="Facebook logo">
+              <p class="m-0 text-color-gray subtitle">Facebook</p>
+            </div>
+            <div class="cursor-pointer" *ngIf="socialMedia.google">
+              <img src="assets/gg.png" alt="Google logo" id="loginGoogle" (click)="getConfigProvider(providerGoogle)">
+              <p class="m-0 text-color-gray subtitle">Google</p>
+            </div>
+          </div>
+          <p class="text-color-gray subtitle" *ngIf="socialMedia.facebook || socialMedia.google">O ingresa con tu correo electrónico</p>
+        </div>
+        <p-message severity="error" *ngIf="errorLogin" text="{{errorLogin}}" styleClass="mr-2 mb-3"></p-message>
+        <div class="p-fluid grid">
+
+          <div class="field col-12 md:col-3 mx-auto mt-2">
+            <span class="p-float-label p-input-icon-right">
+              <i class="pi {{errors.errorEmail ? 'pi-times error' : 'pi-envelope primary-color__light'}}" aria-hidden="true"></i>
+              <input
+              [disabled]="loadingLogin"
+              type="text"
+              id="input_email"
+              data-qa-id="JC-A-L-input_email"
+              pInputText
+              class="{{errors.errorEmail ? 'ng-invalid' : ''}}"
+              [(ngModel)]="email"
+              (ngModelChange)="validateData('email')">
+
+              <label for="input_email">Correo electrónico</label>
+            </span>
+
+            <small id="error_email" *ngIf="errors.errorEmail" class="p-error block text-left">{{ errors.errorEmail }}</small>
+          </div>
+        </div>
+          <div class="p-fluid grid">
+            <div class="field col-12 md:col-3 mx-auto">
+              <span class="p-float-label p-input-icon-right">
+                <i class="pi cursor-pointer {{errors.errorPassword ? 'pi-times error' : 'pi-'+showPassword+ ' primary-color__light'}}" id="eyePassword" (click)="handleShowPassword()" aria-hidden="true"></i>
+                <input
+                [disabled]="loadingLogin"
+                type="{{inputPassword}}"
+                id="input_password"
+                data-qa-id="JC-A-L-input_password"
+                pInputText class="{{errors.errorPassword ? 'ng-invalid' : ''}}"
+                [(ngModel)]="password"
+                (ngModelChange)="validateData('password')">
+                <label for="input_password">Contraseña</label>
+              </span>
+              <small id="error_password" *ngIf="errors.errorPassword" class="p-error block text-left">{{ errors.errorPassword }}</small>
+            </div>
+          </div>
+          <div class="field-checkbox md:col-3 mx-auto">
+            <p-checkbox data-qa-id="JC-A-L-check_remember" [disabled]="loadingLogin" name="checked" [(ngModel)]="checked" [binary]="true" inputId="ch" class="color-check" (click)="handleCheck()"></p-checkbox>
+            <label for="ch" class="text-sm">Recordarme</label>
+          </div>
+
+          <div class="m-auto">
+            <a disabled="loadingLogin" class="cursor-pointer secondary-color link" data-qa-id="JC-A-L-link_forgot_password" [routerLink]="['recovery']"  >
+              ¿Olvidaste tu contraseña?
+            </a>
+          </div>
+          <button pButton pRipple type="button" label="Ingresar" data-qa-id="JC-A-L-link_button_login" class="p-button-rounded py-2 px-4 bg-color__primary primary-color font-bold w-min border-round-2xl m-auto my-4" (click)="login()" [disabled]="loadingLogin" [loading]="loadingLogin"></button>
+          <p class="text-color-gray subtitle">¿Aún sin registrarte? <a class="secondary-color link underline" data-qa-id="JC-A-L-link_register" [routerLink]="['create-account']" disabled="loadingLogin" >Crea tu cuenta</a></p>
+        </div>
+    </div>
+  </div>
+
+<router-outlet></router-outlet>
