@@ -1,13 +1,25 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { Routes, RouterModule } from '@angular/router';
+import { AComponent } from './a/a.component';
 import { EmptyRouteComponent } from './empty-route/empty-route.component';
+import { BComponent } from './b/b.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: 'cuotas',
-    component: AppComponent,
+    component: HomeComponent,
+    children: [
+      {
+        path: 'a',
+        component: AComponent,
+      },
+      {
+        path: 'b',
+        component: BComponent,
+      },
+    ],
   },
   {
     path: '**',
@@ -18,6 +30,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  // providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
 })
 export class AppRoutingModule {}

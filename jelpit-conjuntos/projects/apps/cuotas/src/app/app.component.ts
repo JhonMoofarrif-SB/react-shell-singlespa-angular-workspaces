@@ -1,23 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'windowed-observable';
-
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'cuotas-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  observable = new Observable('konoha');
-  title = '@apps/cuotas';
-  constructor() {
-  }
-  ngOnInit() {
-    this.observable.subscribe((ninja) => {
-      console.log("Observer Angular", ninja)
-    })
-  };
-  handleClick() {
-    this.observable.publish('Kamisama');
-  };
+export class AppComponent {
+  title = 'Cuotas';
 }
